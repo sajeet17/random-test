@@ -6,7 +6,9 @@ from django.shortcuts import render
 # function based views
 def home(request):
     num = random.randint(0, 9)
-    return render(request, "base.html", {"html_var": " your lucky chance", "num": num})
+    foo = [True, False]
+    luck = random.choice(foo)
+    return render(request, "base.html", {"html_var": luck, "num": num})
 
 
 '''

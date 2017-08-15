@@ -8,8 +8,13 @@
 
 <body>
     <h1> Hello Poor Soul</h1>
-    <p> This is {{ html_var }}. You will be given a lucky number for the day</p>
-    <h2> Your Lucky Number is {{ num }}. Use it wisely poor soul.</h2>
+    <p>
+        {% if html_var %}
+        <h2> Congratulations it is your lucky day. You will be given a lucky number for the day</p>
+        <h2> Your Lucky Number is {{ num }}. Use it wisely poor soul.</h2>
+        {%else%}
+        <h2> Sorry You are going to have a hard time today. Please come back tomorrow </h2>
+        {% endif %}
 </body>
 
 </html>
