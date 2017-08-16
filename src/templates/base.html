@@ -7,13 +7,17 @@
 </head>
 
 <body>
-    <h1> Hello Poor Soul</h1>
-    <p>
+
+
         {% if html_var %}
-        <h2> Congratulations it is your lucky day. You will be given a lucky number for the day</p>
-        <h2> Your Lucky Number is {{ num }}. Use it wisely poor soul.</h2>
+        <h1> Hello Lucky Soul</h1>
+        <h2> Congratulations!!! it is your lucky day. You will be given a lucky number for the day</p>
+        <h2> Your Lucky Number is {{ num }}. Use it wisely.</h2>
+        <h2> Your lucky element is <b>{{lucky_element}}</b><br/></h2>
+
         {%else%}
-        <h2> Sorry You are going to have a hard time today. Please come back tomorrow </h2>
+        <h1> Hello Poor Soul</h1>
+        <h2> Sorry no luck this time poor soul. Please refresh to see if you are lucky. </h2>
         {% endif %}
 </body>
 

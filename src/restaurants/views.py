@@ -8,7 +8,12 @@ def home(request):
     num = random.randint(0, 9)
     foo = [True, False]
     luck = random.choice(foo)
-    return render(request, "base.html", {"html_var": luck, "num": num})
+    lucky_elements = ["fire", "water", "earth", "wind", "metal"]
+
+    context = {"html_var": luck,
+               "num": num,
+               "lucky_element": random.choice(lucky_elements)}
+    return render(request, "base.html", context)
 
 
 '''
